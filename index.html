@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <button id="darkToggle">🌙</button>
+
+    <div class="Text">
+        <textarea id="fromText" placeholder="Enter Text"></textarea>
+        <textarea id="toText" placeholder="Translate"></textarea>
+    </div>
+
+    <div class="selectArea">
+        <div class="select1">
+            <img src="speaker.svg" alt="Speak">
+            <img src="copy.svg" alt="Copy">
+            <select id="fselect">
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+            </select>
+        </div>
+        <div class="select2">
+            <img src="speaker.svg" alt="Speak">
+            <img src="copy.svg" alt="Copy">
+            <select id="sselect">
+                <option value="hi">Hindi</option>
+                <option value="en">English</option>
+            </select>
+        </div>
+    </div>
+
+    <button id="Transfer">Translate</button>
+</div>
+
+<script src="countries.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

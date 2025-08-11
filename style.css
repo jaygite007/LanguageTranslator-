@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.3s ease;
+}
+
+body {
+    background-color: #003A52;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dark-mode {
+    background-color: #0d0d0d;
+}
+
+img {
+    height: 30px;
+    filter: brightness(0) invert(1);
+    cursor: pointer;
+}
+
+.container {
+    width: 650px;
+    height: 600px;
+    background: linear-gradient(to top, #012E4D, #007EA7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+    position: relative;
+    padding: 20px;
+}
+
+.dark-mode .container {
+    background: linear-gradient(to top, #1a1a1a, #2c2c2c);
+}
+
+#darkToggle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+}
+
+#darkToggle:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.Text {
+    width: 100%;
+    height: 260px;
+    display: flex;
+    gap: 10px;
+}
+
+textarea {
+    width: 100%;
+    height: 260px;
+    color: black;
+    background-color: #fff;
+    font-size: 18px;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    resize: none;
+    outline: none;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+}
+
+.dark-mode textarea {
+    background-color: #0f0f0f;
+    color: white;
+    box-shadow: inset 0 0 5px rgba(30, 29, 29, 0.05);
+}
+
+.selectArea {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-top: 20px;
+}
+
+.select1, .select2 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background-color: #00171F;
+    border-radius: 8px;
+    padding: 0 10px;
+}
+
+.dark-mode .select1,
+.dark-mode .select2 {
+    background-color: #111;
+}
+
+select {
+    padding: 10px 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+    /* border: 2px solid red; */
+}
+
+#Transfer {
+    width: 500px;
+    height: 50px;
+    background-color: #00171F;
+    margin-top: 50px;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+#Transfer:hover {
+    background-color: #004466;
+}
+
+.dark-mode #Transfer {
+    background-color: #222;
+}
+
+.dark-mode #Transfer:hover {
+    background-color: #444;
+}
+
+
+@media (max-width: 768px) {
+    .Text {
+        flex-direction: column;
+    }
+    textarea {
+        flex: 1 1 100%;
+    }
+    .select1, .select2 {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+    textarea {
+        min-height: 150px;
+        font-size: 14px;
+    }
+    select {
+        font-size: 13px;
+    }
+    #Transfer {
+        font-size: 16px;
+    }
+}
+
+/* For tablets and smaller screens */
+@media (max-width: 1024px) {
+    .container {
+        width: 90%;
+        height: auto; /* Adjust height only for smaller screens */
+    }
+    #Transfer {
+        width: 100%;
+    }
+}
+
+/* For mobile */
+@media (max-width: 768px) {
+    .Text {
+        flex-direction: column;
+        height: auto;
+    }
+    textarea {
+        height: 180px;
+    }
+    .selectArea {
+        flex-direction: column;
+        height: auto;
+    }
+    .select1, .select2 {
+        width: 100%;
+        height: 60px;
+        padding: 3px;
+        /* border: 2px solid red; */
+        /* align-items: center; */
+    }
+    select{
+        height: 40px;
+    }
+}
+
+/* Small mobile screens */
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+        border-radius: 12px;
+    }
+    textarea {
+        min-height: 140px;
+        font-size: 14px;
+    }
+    select {
+        font-size: 13px;
+    }
+    #Transfer {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
